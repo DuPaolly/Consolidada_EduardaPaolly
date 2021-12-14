@@ -9,10 +9,22 @@ public class MenuOpcoes : MonoBehaviour
     [SerializeField] AudioMixer mixerMenu;
     [SerializeField] GameObject menuOpcoes;
     [SerializeField] Dropdown resolutionsDropdown;
+    [SerializeField] Slider sliderDeVolume;
+    [SerializeField] Toggle toggleTelaCheia;
     Resolution[] resolutions;
+
+    
 
     private void Start()
     {
+        float volumeArmazenado = Saves.CarregaVolumeMusica();
+        sliderDeVolume.value = volumeArmazenado;
+        AlterarVolumeMenuInicial(volumeArmazenado);
+
+        bool telaArmazenada = Saves.CarregaTelaCheia();
+        toggleTelaCheia.isOn = telaArmazenada;
+        TelaCheia(telaArmazenada);
+
         resolutions = Screen.resolutions;
         resolutionsDropdown.ClearOptions();
         int indexResolutions = 0;
@@ -30,9 +42,9 @@ public class MenuOpcoes : MonoBehaviour
         }
 
         resolutionsDropdown.AddOptions(opcoes);
-        resolutionsDropdown.value = indexResolutions;
+        resolutionsDropdown.value = Saves.CarregaResolucao(resolutions.Length - 1);
         resolutionsDropdown.RefreshShownValue();
-
+        menuOpcoes.SetActive(false);
     }
 
     public void BotaoSair()
@@ -42,12 +54,14 @@ public class MenuOpcoes : MonoBehaviour
 
     public void AlterarVolumeMenuInicial(float novoVolume)
     {
+        Saves.SalvaVolumeMusica(novoVolume);
         novoVolume = Mathf.Log10(novoVolume) * 20;
         mixerMenu.SetFloat("VolumeMenuInicial", novoVolume);
     }
 
     public void TelaCheia(bool queroTelaCheia)
     {
+        Saves.SalvaTelaCheia(queroTelaCheia);
         Screen.fullScreen = queroTelaCheia;        
     }
 
@@ -55,5 +69,6 @@ public class MenuOpcoes : MonoBehaviour
     {
         Resolution resolucao = resolutions[resolutionIndex];
         Screen.SetResolution(resolucao.width, resolucao.height, Screen.fullScreen);
+        Saves.SalvaResolucao(resolutionIndex);
     }
 }

@@ -11,7 +11,7 @@ public class MenuInicial : MonoBehaviour
 
     void Start()
     {
-        menuOpcoes.SetActive(false);
+        menuOpcoes.SetActive(true);
         menuSair.SetActive(false);
     }
 

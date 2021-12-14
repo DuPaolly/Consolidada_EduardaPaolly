@@ -44,7 +44,7 @@ public class UIJogo : MonoBehaviour
 
     public void SimMenuInicial()
     {
-        SceneManager.LoadScene("MenuIncial");
+        SceneManager.LoadScene("MenuInicial");
     }
 
     public void NaoMenuInicial()

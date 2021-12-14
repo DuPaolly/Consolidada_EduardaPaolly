@@ -611,7 +611,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: b010b1b51c1831d4cbfc006f1d1c13d8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 08246e5aa32c8794dbec7cb8d3ead5b5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1109,6 +1109,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697791927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5625519225364279218, guid: 6103494d0bee7af4a805da40271a8ea3, type: 3}
+  m_PrefabInstance: {fileID: 5625519225424016938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1741497838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5625519225940104132, guid: 6103494d0bee7af4a805da40271a8ea3, type: 3}
@@ -1318,6 +1329,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110342128 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5625519226362374706, guid: 6103494d0bee7af4a805da40271a8ea3, type: 3}
+  m_PrefabInstance: {fileID: 5625519225424016938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3493965027363246841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1426,6 +1448,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuOpcoes
       objectReference: {fileID: 0}
+    - target: {fileID: 5625519225940104133, guid: 6103494d0bee7af4a805da40271a8ea3, type: 3}
+      propertyPath: sliderDeVolume
+      value: 
+      objectReference: {fileID: 2110342128}
+    - target: {fileID: 5625519225940104133, guid: 6103494d0bee7af4a805da40271a8ea3, type: 3}
+      propertyPath: toggleTelaCheia
+      value: 
+      objectReference: {fileID: 1697791927}
     - target: {fileID: 5625519225940104154, guid: 6103494d0bee7af4a805da40271a8ea3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
